@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+.uploadBtn::file-selector-button {
+    @apply border-none outline-none bg-zinc-900 text-white px-2 py-2 rounded-l-sm transition-all duration-700 cursor-pointer hover:bg-zinc-500
+}
+
+.fade {
+    animation: fade 1s;
+}
+
+.focusable-input-div:focus-within {
+    @apply border-blue-500 transition-all duration-300
+}
+
+@keyframes fade {
+    from {
+        @apply scale-0 opacity-0
+    }
+
+    to {
+        @apply scale-100 opacity-100
+    }
+}
