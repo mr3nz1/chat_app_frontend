@@ -6,7 +6,19 @@ import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlin
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import Trending from "./Trending"
 
-function Sidebar() {
+function Sidebar(props) {
+  const { setIsNewPostModalOpen } = props
+
+  const handleOpenNewPostModal = () => {
+    document.body.classList.add('overflow-hidden');
+    setIsNewPostModalOpen(prevIsNewPostModalOpen => !prevIsNewPostModalOpen)
+  }
+
+  const handleCloseNewPostModal = () => {
+    document.body.classList.add('overflow-hidden');
+    setIsNewPostModalOpen(prevIsNewPostModalOpen => !prevIsNewPostModalOpen)
+  }
+
   return (
     // w-full md:w-96 h-96  I might add this later
     <div className='w-full bg-gray-100 rounded-sm py-2 px-6'>
@@ -25,7 +37,7 @@ function Sidebar() {
           <p>Inshuti 40</p>
           <p>Post 6</p>
         </div>
-        <Link to="" className="px-4 py-2 font-bold bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-all duration-300 flex items-center space-x-1">
+        <Link onClick={handleOpenNewPostModal} to="" className="px-4 py-2 font-bold bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-all duration-300 flex items-center space-x-1">
           Andika
         </Link>
       </div>
