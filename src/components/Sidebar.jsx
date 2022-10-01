@@ -13,12 +13,7 @@ function Sidebar(props) {
     document.body.classList.add('overflow-hidden');
     setIsNewPostModalOpen(prevIsNewPostModalOpen => !prevIsNewPostModalOpen)
   }
-
-  const handleCloseNewPostModal = () => {
-    document.body.classList.add('overflow-hidden');
-    setIsNewPostModalOpen(prevIsNewPostModalOpen => !prevIsNewPostModalOpen)
-  }
-
+  
   return (
     // w-full md:w-96 h-96  I might add this later
     <div className='w-full bg-gray-100 rounded-sm py-2 px-6'>

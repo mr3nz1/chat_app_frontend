@@ -19,10 +19,9 @@ function Home() {
         </div>
       </div>
       {isNewPostModalOpen &&
-        <NewPostModal />
+        <NewPostModal setIsNewPostModalOpen={setIsNewPostModalOpen} />
       }
     </div>
-
   )
 }
 
